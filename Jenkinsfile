@@ -22,7 +22,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'python tictactoe.py test'
+                sh 'python square_marker.py test'
+                sh 'python win_checker.py test'
             }
         }
         stage('Deliver') { 
