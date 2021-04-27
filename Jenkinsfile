@@ -45,6 +45,7 @@ pipeline {
                 success {
                     archiveArtifacts "${env.BUILD_ID}/dist/tictactoe" 
                     sh "docker run --rm -v ${VOLUME} ${IMAGE} 'rm -rf build dist'"
+                    sh "docker build -t isakohman/tictactoe"
                     sh "docker push isakohman/tictactoe"
                 }
             }
