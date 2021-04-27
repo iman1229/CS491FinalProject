@@ -24,9 +24,9 @@ pipeline {
             steps {
                 sh 'python square_marker.py test'
                 sh 'python win_checker.py test'
-                sh 'python tests/integration_tests.py'
-                sh 'python tests/square_marker_test.py'
-                sh 'python tests/win_checker_test.py'
+                sh 'python integration_tests.py'
+                sh 'python square_marker_test.py'
+                sh 'python win_checker_test.py'
             }
         }
         stage('Deliver') { 
